@@ -82,11 +82,12 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/common_google_signin_btn_text_light"/>
         <Button
+            android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="42dp"
             android:textSize="17sp"
             android:text="Sign-up"
-            android:background="#ffffff"/>
+            android:background="#ffffff" />
     </LinearLayout>
 
     </RelativeLayout>

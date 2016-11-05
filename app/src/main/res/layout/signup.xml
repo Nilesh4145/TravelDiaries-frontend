@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.travel_diaries.traveldiaries.Signup"
+    android:layout_centerInParent="true">
+
+
+        <TextView
+            android:id="@+id/xmlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_marginTop="10sp"
+            android:paddingLeft="30sp"
+            android:paddingTop="10sp"
+            android:text="New User"
+            android:textAllCaps="true"
+            android:textColor="#424242"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:inputType="textPersonName"
+            android:layout_marginRight="10sp"
+            android:layout_below="@+id/xmlHeader"
+            android:layout_marginLeft="10sp"
+            android:hint="Name"
+            android:paddingLeft="10sp"
+            android:textSize="23sp"
+            />
+
+        <EditText
+            android:id="@+id/uid"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:inputType="textPersonName"
+            android:layout_marginRight="10sp"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:hint="Username"
+            android:paddingLeft="10sp"
+            android:textSize="23sp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:inputType="textEmailAddress"
+        android:layout_marginRight="10sp"
+        android:layout_below="@+id/uid"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5sp"
+        android:hint="E-Mail"
+        android:paddingLeft="10sp"
+        android:textSize="23sp" />
+
+    <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="10sp"
+            android:hint="Password"
+            android:paddingLeft="10sp"
+            android:layout_below="@+id/phLinear"
+            android:textSize="23sp"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/repass"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="10sp"
+            android:hint="Re-enter Password"
+            android:paddingLeft="10sp"
+            android:layout_below="@+id/pass"
+            android:textSize="23sp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/reg"
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:text="Register"
+            android:layout_below="@+id/repass"
+            android:layout_marginTop="20sp"
+            android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/phLinear"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal"
+        android:paddingLeft="10sp"
+        android:textSize="23sp"
+        android:layout_below="@+id/email"
+        android:layout_alignStart="@+id/uid">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:text="+91 -"
+            android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/phno"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:hint="Phone Number"
+            android:paddingLeft="10sp"
+            android:textSize="23sp"
+            android:inputType="number|phone"
+            android:maxLength="10" />
+
+    </LinearLayout>
+</RelativeLayout>
+

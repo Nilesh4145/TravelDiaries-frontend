@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements
     public String uLName;
     public String uEmail;
 
-
+    Button signup;
     private GoogleApiClient mGoogleApiClient;
 
     @Override
@@ -35,6 +36,16 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.sign_in_button).setOnClickListener(MainActivity.this);
+
+        signup = (Button) findViewById(R.id.signup);
+        signup.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Signup.class);
+                startActivity(i);
+            }
+        });
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -88,4 +99,5 @@ public class MainActivity extends AppCompatActivity implements
             signIn();
         }
     }
+
 }
